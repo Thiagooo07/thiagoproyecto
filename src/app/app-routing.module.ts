@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InicioComponent } from './inicio/inicio.component';
+import { InicioComponent } from './modules/inicio/pages/inicio/inicio.component';
 
 //son las encargadas de tener todas las rutas de la pagina
 const routes: Routes = [

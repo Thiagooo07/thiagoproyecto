@@ -7,6 +7,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { SharedModule } from './modules/shared/shared.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatToolbarModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    SharedModule
     
     
   ],

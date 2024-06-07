@@ -9,6 +9,13 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { SharedModule } from './modules/shared/shared.module';
 
+//VINCULACIONES/ IMPORTACIONES CON FIREBASE
+
+import { environment } from 'src/environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireModule } from '@angular/fire/compat';
+import {AngularFireStorageModule} from '@angular/fire/compat/storage';
+
 
 @NgModule({
   declarations: [
@@ -21,8 +28,14 @@ import { SharedModule } from './modules/shared/shared.module';
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
-    SharedModule
-    
+    SharedModule,
+    //Inicializa firebase en nuestro proyecto
+
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+
+    //autentificacion
+    AngularFireAuthModule,
+    AngularFireStorageModule,
     
   ],
   providers: [],

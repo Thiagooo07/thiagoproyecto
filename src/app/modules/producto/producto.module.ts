@@ -7,6 +7,9 @@ import { IndumentariaComponent } from './pages/indumentaria/indumentaria.compone
 import { BotinesComponent } from './pages/botines/botines.component';
 import { MochilasComponent } from './pages/mochilas/mochilas.component';
 import { CalzadodeportivoComponent } from './pages/calzadodeportivo/calzadodeportivo.component';
+import { CardComponent } from './components/card/card.component';
+import { CardJuguetesComponent } from './components/card-juguetes/card-juguetes.component';
+import { JuguetesComponent } from './pages/juguetes/juguetes.component';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { CalzadodeportivoComponent } from './pages/calzadodeportivo/calzadodepor
     IndumentariaComponent,
     BotinesComponent,
     MochilasComponent,
-    CalzadodeportivoComponent
+    CalzadodeportivoComponent,
+    CardComponent,
+    CardJuguetesComponent,
+    JuguetesComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +32,10 @@ import { CalzadodeportivoComponent } from './pages/calzadodeportivo/calzadodepor
     IndumentariaComponent,
     MochilasComponent,
     CalzadodeportivoComponent,
-    BotinesComponent
+    BotinesComponent,
+    JuguetesComponent,
+    CardComponent,
+    CardJuguetesComponent
 
   ]
 })

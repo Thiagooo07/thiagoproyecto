@@ -8,8 +8,12 @@ import { BotinesComponent } from './pages/botines/botines.component';
 import { MochilasComponent } from './pages/mochilas/mochilas.component';
 import { CalzadodeportivoComponent } from './pages/calzadodeportivo/calzadodeportivo.component';
 import { CardComponent } from './components/card/card.component';
-import { CardJuguetesComponent } from './components/card-juguetes/card-juguetes.component';
-import { JuguetesComponent } from './pages/juguetes/juguetes.component';
+import { CardBotinesComponent } from './components/card-botines/card-botines.component';
+import { CardCalzadodeportivoComponent } from './components/card-calzadodeportivo/card-calzadodeportivo.component';
+import { CardIndumentariaComponent } from './components/card-indumentaria/card-indumentaria.component';
+import { CardMochilasComponent } from './components/card-mochilas/card-mochilas.component';
+
+
 
 
 @NgModule({
@@ -20,12 +24,16 @@ import { JuguetesComponent } from './pages/juguetes/juguetes.component';
     MochilasComponent,
     CalzadodeportivoComponent,
     CardComponent,
-    CardJuguetesComponent,
-    JuguetesComponent
+    CardBotinesComponent,
+    CardCalzadodeportivoComponent,
+    CardIndumentariaComponent,
+    CardMochilasComponent,
+  
+    
   ],
   imports: [
     CommonModule,
-    ProductoRoutingModule
+    ProductoRoutingModule,
   ],
   exports:[
     ProductoComponent,
@@ -33,10 +41,8 @@ import { JuguetesComponent } from './pages/juguetes/juguetes.component';
     MochilasComponent,
     CalzadodeportivoComponent,
     BotinesComponent,
-    JuguetesComponent,
     CardComponent,
-    CardJuguetesComponent
-
+  
   ]
 })
 export class ProductoModule { }

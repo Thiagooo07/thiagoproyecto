@@ -7,7 +7,7 @@
 
   @media (min-width: 300px) and (max-width: 700px){
     mat-toolbar{
-      background-color: pink;
+      background-color: rgb(228, 25, 58);
     }
      
     #menuInicio{
@@ -22,7 +22,7 @@
 
   @media (min-width: 700px){
     mat-toolbar{
-      background-color: rgb(38, 204, 246);
+      background-color: rgb(53, 10, 207);
     }
   
   #menuSecciones{

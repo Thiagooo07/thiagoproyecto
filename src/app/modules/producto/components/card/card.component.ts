@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
 import { CrudService } from 'src/app/modules/admin/services/crud.service';
@@ -18,9 +19,9 @@ export class CardComponent {
   modalVisible: boolean = false;
 
   constructor(public servicioCrud: CrudService){}
-
+  
   ngOnInit(): void{
-    this.servicioCrud.obteberProductos().subscribe(producto => {
+    this.servicioCrud.obtenerProducto().subscribe(producto => {
       this.coleccionProductos = producto;
     })
   }

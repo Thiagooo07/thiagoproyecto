@@ -1,12 +1,32 @@
 <div class="container">
   <div class="row">
-    <h3>Inicio</h3>
 
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <iframe width="1100" height="415" src="https://www.youtube.com/embed/BVlGKbEj0nU?si=Xe5n7aAfWtP8p15a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="carousel-item">
+            <iframe width="1100" height="415" src="https://www.youtube.com/embed/RRAaIcA1rUY?si=oPcrVIG9vqhnubP0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="carousel-item">
+            <iframe width="1100" height="415" src="https://www.youtube.com/embed/5Cwu3TC8tr8?si=FMBw_rj_vi-VdwEL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 
       <div *ngFor="let i of info" class="col-lg-4" >
         <mat-card class="example-card">
           <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
+            <div mat-card-avatar class="example-header-image"> </div>
             <mat-card-title>{{i.nombre}}</mat-card-title>
             <mat-card-subtitle>{{i.id}}</mat-card-subtitle>
           </mat-card-header>
@@ -23,4 +43,4 @@
         
       </div>
     </div>
-</div>
+  </div>

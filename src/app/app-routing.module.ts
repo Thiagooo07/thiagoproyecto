@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './modules/inicio/pages/inicio/inicio.component';
+import { ContactoComponent } from './modules/contacto/components/contacto/contacto.component';
 
 //son las encargadas de tener todas las rutas de la pagina
 const routes: Routes = [
   //ruta comun -> 1 solo componente
 {
   path:"",component:InicioComponent
+},
+{
+  path:"", component:ContactoComponent
 },
 //carga perezosa -> 1 modulo
 //loadchildren: indica una ruta hija 

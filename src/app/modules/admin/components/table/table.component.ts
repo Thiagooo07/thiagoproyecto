@@ -63,7 +63,7 @@ export class TableComponent {
       }
 
       // Enviamos nombre y url de la imagen; definimos carpeta de imágenes como "productos"
-      await this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "productos")
+      await this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "producto")
         .then(resp => {
           // Encapsulamos respuesta y envíamos la información obtenida
           this.servicioCrud.obtenerUrlImagen(resp)
@@ -130,7 +130,7 @@ export class TableComponent {
       precio: this.producto.value.precio!,
       descripcion: this.producto.value.descripcion!,
       categoria: this.producto.value.categoria!,
-      imagen: this.productoSeleccionado.imagen!,
+      imagen: this.productoSeleccionado.imagen,
       alt: this.producto.value.alt!
     }
 
@@ -148,7 +148,7 @@ export class TableComponent {
       let reader = new FileReader();  
 
       if (archivo != undefined){
-        reader.readAsArrayBuffer(archivo)
+        reader.readAsDataURL(archivo)
         reader.onloadend = () => {
           let url = reader.result;
 

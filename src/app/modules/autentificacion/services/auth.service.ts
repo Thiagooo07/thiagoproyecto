@@ -15,21 +15,21 @@ export class AuthService {
   //Funcion para tomar UID
 
   //Funcion para REGISTRO
-
   registrar (email:string, password: string){
     return this.auth.createUserWithEmailAndPassword(email,password);
   }
   //Funcion para INICIO DE SESION
-
   iniciarSesion(email:string, password:string){
     //valiadr el email y la contraseña
     return this.auth.signInWithEmailAndPassword(email,password);
   }
+
   //Funcion para CERRAR SESION
   cerrarSesion(){
     //Devolver una promesa vacia
     return this.auth.signOut();
   }
+
   obtenerUsuario(email:string){
     return this.servicioFireStore.collection('usuarios', ref => ref.where('email','==',email)).get().toPromise();
   }

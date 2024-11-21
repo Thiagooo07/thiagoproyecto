@@ -1,0 +1,112 @@
+/* Estilo general para el contenedor */
+.container {
+    max-width: 1200px;  /* Ancho máximo */
+    margin: 0 auto;  /* Centrado */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f4f4f9;  /* Fondo gris suave */
+  }
+  
+  /* Estilo para la fila de productos */
+  .row {
+    display: flex;
+    flex-wrap: wrap;  /* Permite que las columnas se ajusten en pantallas más pequeñas */
+    gap: 20px;  /* Espacio entre las columnas */
+    justify-content: space-between;  /* Distribuye las columnas de forma equitativa */
+    margin-bottom: 40px;
+  }
+  
+  /* Estilo para el título */
+  h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;  /* Color gris oscuro */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Estilo para las columnas */
+  .col {
+    flex: 1 1 30%;  /* Las columnas ocupan el 30% del ancho */
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Responsividad: para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .col {
+      flex: 1 1 45%;  /* Para pantallas medianas, las columnas ocupan el 45% */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .col {
+      flex: 1 1 100%;  /* Para pantallas pequeñas, las columnas ocupan el 100% */
+    }
+  }
+  
+  /* Estilo básico para el componente <app-card-indumentaria> */
+  app-card-indumentaria {
+    width: 100%;  /* Asegura que el componente ocupe todo el ancho disponible */
+    max-width: 320px;  /* Evita que los componentes sean demasiado grandes */
+    background-color: #ffffff;  /* Fondo blanco */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #ddd;  /* Borde gris claro */
+  }
+  
+  /* Efecto al pasar el mouse sobre el componente */
+  app-card-indumentaria:hover {
+    transform: translateY(-5px);  /* Eleva el card al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Aumenta la sombra */
+  }
+  
+  /* Títulos o texto dentro de cada card */
+  app-card-indumentaria h3 {
+    color: #34495e;  /* Color gris azulado para el título */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Descripción dentro del card */
+  app-card-indumentaria p {
+    color: #7f8c8d;  /* Color gris más claro para la descripción */
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  /* Botón dentro de cada card */
+  app-card-indumentaria button {
+    background-color: #1abc9c;  /* Color verde suave */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efecto de hover en el botón */
+  app-card-indumentaria button:hover {
+    background-color: #16a085;  /* Color verde más oscuro */
+  }
+  
+  /* Estilo de un "precio" o etiqueta si es necesario */
+  app-card-indumentaria .price {
+    color: #e74c3c;  /* Color rojo para el precio */
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  

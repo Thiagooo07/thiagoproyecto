@@ -42,6 +42,7 @@ import { CardMochilasComponent } from './components/card-mochilas/card-mochilas.
     CalzadodeportivoComponent,
     BotinesComponent,
     CardComponent,
+   
   
   ]
 })

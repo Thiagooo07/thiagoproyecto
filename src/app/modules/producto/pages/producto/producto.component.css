@@ -1,13 +1,112 @@
-.container{
-    text-align: center;
-    justify-content: center;
+/* Estilo general para el contenedor */
+.container {
+    max-width: 1200px;  /* Ancho máximo */
+    margin: 0 auto;  /* Centrado */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;  /* Fondo gris claro */
+  }
+  
+  /* Estilo para la fila de productos */
+  .row {
     display: flex;
-}
-
-h1{
-    padding: 1rem;
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    filter: invert(48%) sepia(69%) saturate(511%) hue-rotate(86deg) brightness(93%) contrast(99%);
-}
+    flex-wrap: wrap;  /* Permite que las columnas se ajusten en pantallas más pequeñas */
+    gap: 20px;  /* Espacio entre las columnas */
+    justify-content: space-between;  /* Distribuye las columnas de forma equitativa */
+    margin-bottom: 40px;
+  }
+  
+  /* Estilo para el título */
+  h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;  /* Gris oscuro para el título */
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Estilo para las columnas */
+  .col {
+    flex: 1 1 30%;  /* Las columnas ocupan el 30% del ancho */
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Responsividad: para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .col {
+      flex: 1 1 45%;  /* Para pantallas medianas, las columnas ocupan el 45% */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .col {
+      flex: 1 1 100%;  /* Para pantallas pequeñas, las columnas ocupan el 100% */
+    }
+  }
+  
+  /* Estilo básico para el componente <app-card> */
+  app-card {
+    width: 100%;  /* Asegura que el componente ocupe todo el ancho disponible */
+    max-width: 350px;  /* Máximo tamaño para las tarjetas */
+    background-color: #ffffff;  /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #ddd;  /* Borde gris suave */
+  }
+  
+  /* Efecto hover en el componente */
+  app-card:hover {
+    transform: translateY(-8px);  /* Eleva la tarjeta al pasar el mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);  /* Aumenta la sombra */
+  }
+  
+  /* Estilo para los títulos dentro de cada card */
+  app-card h3 {
+    color: #34495e;  /* Gris oscuro para los títulos */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Descripción dentro de cada card */
+  app-card p {
+    color: #7f8c8d;  /* Gris más claro para la descripción */
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Botón dentro de cada card */
+  app-card button {
+    background-color: #e67e22;  /* Naranja vibrante */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efecto hover en el botón */
+  app-card button:hover {
+    background-color: #d35400;  /* Naranja más oscuro */
+  }
+  
+  /* Estilo de un "precio" o etiqueta */
+  app-card .price {
+    color: #e74c3c;  /* Rojo brillante para el precio */
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  

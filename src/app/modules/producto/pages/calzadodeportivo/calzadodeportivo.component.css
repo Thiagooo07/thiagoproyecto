@@ -1,20 +1,112 @@
+/* Estilo general para el contenedor */
 .container {
+    max-width: 1200px;  /* Ancho máximo */
+    margin: 0 auto;  /* Centrado */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;  /* Fondo gris claro */
+  }
+  
+  /* Estilo para la fila de productos */
+  .row {
+    display: flex;
+    flex-wrap: wrap;  /* Permite que las columnas se ajusten en pantallas más pequeñas */
+    gap: 20px;  /* Espacio entre las columnas */
+    justify-content: space-between;  /* Distribuye las columnas de forma equitativa */
+    margin-bottom: 40px;
+  }
+  
+  /* Estilo para el título */
+  h1 {
+    font-size: 2.5rem;
+    color: #4A90E2;  /* Color azul vibrante */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Estilo para las columnas */
+  .col {
+    flex: 1 1 30%;  /* Las columnas ocupan el 30% del ancho */
+    box-sizing: border-box;
+    padding: 15px;
     display: flex;
     justify-content: center;
-    align-items: center; /* Alinea verticalmente el contenido */
+    align-items: center;
+  }
+  
+  /* Responsividad: para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .col {
+      flex: 1 1 45%;  /* Para pantallas medianas, las columnas ocupan el 45% */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .col {
+      flex: 1 1 100%;  /* Para pantallas pequeñas, las columnas ocupan el 100% */
+    }
+  }
+  
+  /* Estilo básico para el componente <app-card-calzadodeportivo> */
+  app-card-calzadodeportivo {
+    width: 100%;  /* Asegura que el componente ocupe todo el ancho disponible */
+    max-width: 320px;  /* Evita que los componentes sean demasiado grandes */
+    background-color: #ffffff;  /* Fondo blanco */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Sombra suave */
     text-align: center;
-    padding: 2rem; /* Espacio alrededor del contenedor */
-    background-color: #f9f9f9; /* Fondo suave */
-    border: 1px solid #3fc7df; /* Borde sutil */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-}
-
-h1 {    
-    padding: 1rem;
-    font-size: 2.5rem; /* Tamaño de fuente más grande */
-    color: #333; /* Color de texto más oscuro */
-    margin: 0; /* Elimina el margen por defecto */
-    text-transform: uppercase; /* Texto en mayúsculas */
-    letter-spacing: 1px; /* Espaciado entre letras */
-}
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #ddd;  /* Borde gris claro */
+  }
+  
+  /* Efecto al pasar el mouse sobre el componente */
+  app-card-calzadodeportivo:hover {
+    transform: translateY(-5px);  /* Eleva el card al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Aumenta la sombra */
+  }
+  
+  /* Títulos o texto dentro de cada card */
+  app-card-calzadodeportivo h3 {
+    color: #333333;  /* Color oscuro para el título */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Descripción dentro del card */
+  app-card-calzadodeportivo p {
+    color: #666666;  /* Color gris para la descripción */
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  /* Botón dentro de cada card */
+  app-card-calzadodeportivo button {
+    background-color: #4A90E2;  /* Azul vibrante */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efecto de hover en el botón */
+  app-card-calzadodeportivo button:hover {
+    background-color: #357ABD;  /* Azul más oscuro */
+  }
+  
+  /* Estilo de un "precio" o etiqueta si es necesario */
+  app-card-calzadodeportivo .price {
+    color: #E94E77;  /* Color rosa para el precio */
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  

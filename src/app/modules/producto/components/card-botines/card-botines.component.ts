@@ -12,7 +12,7 @@ export class CardBotinesComponent {
   // Colección de todos los productos
   coleccionProductos: Producto[] = [];
 
-  // Colección de sólo productos de categoría "Juguetes"
+
   coleccionBotines: Producto[] = [];
 
   productoSeleccionado!: Producto;

@@ -1,9 +1,66 @@
-.container{
-    text-align: center;
-    justify-content: center;
+/* Estilo general para el contenedor */
+.container {
+    max-width: 1200px;  /* Ancho máximo */
+    margin: 0 auto;  /* Centrado */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para la fila de productos */
+  .row {
     display: flex;
-}
-
-h1{
-    padding: 1rem;
-}
+    flex-wrap: wrap; /* Permite que las columnas se ajusten en pantallas más pequeñas */
+    gap: 20px;  /* Espacio entre las columnas */
+    justify-content: space-between;  /* Distribuye las columnas de forma equitativa */
+    margin-bottom: 40px;
+  }
+  
+  /* Estilo para el título */
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Estilo para las columnas */
+  .col {
+    flex: 1 1 30%;  /* Las columnas se ajustan a un 30% del ancho de la fila */
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Responsividad: para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .col {
+      flex: 1 1 45%;  /* Para pantallas medianas, las columnas ocupan el 45% */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .col {
+      flex: 1 1 100%;  /* Para pantallas pequeñas, las columnas ocupan el 100% */
+    }
+  }
+  
+  /* Estilo básico para el componente <app-card-botines> */
+  app-card-botines {
+    width: 100%;  /* Asegura que el componente ocupe todo el ancho disponible */
+    max-width: 320px;  /* Evita que los componentes sean demasiado grandes */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Efecto al pasar el mouse sobre el componente */
+  app-card-botines:hover {
+    transform: translateY(-5px);  /* Eleva el card al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);  /* Aumenta la sombra */
+  }

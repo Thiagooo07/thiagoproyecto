@@ -1,6 +1,6 @@
 /* Estilo general para el contenedor */
 .container {
-    max-width: 1200px;  /* Ancho máximo */
+     /* Ancho máximo */
     margin: 0 auto;  /* Centrado */
     padding: 20px;
     box-sizing: border-box;
@@ -28,14 +28,6 @@
   }
   
   /* Estilo para las columnas */
-  .col {
-    flex: 1 1 30%;  /* Las columnas ocupan el 30% del ancho */
-    box-sizing: border-box;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   
   /* Responsividad: para pantallas más pequeñas */
   @media (max-width: 768px) {
@@ -85,28 +77,5 @@
     line-height: 1.6;
   }
   
-  /* Botón dentro de cada card */
-  app-card button {
-    background-color: #e67e22;  /* Naranja vibrante */
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
   
-  /* Efecto hover en el botón */
-  app-card button:hover {
-    background-color: #d35400;  /* Naranja más oscuro */
-  }
-  
-  /* Estilo de un "precio" o etiqueta */
-  app-card .price {
-    color: #e74c3c;  /* Rojo brillante para el precio */
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-top: 15px;
-  }
   

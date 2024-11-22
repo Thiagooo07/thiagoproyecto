@@ -25,7 +25,7 @@ export class RegistroComponent {
     nombre: '',
     apellido: '',
     email: '',
-    rol: '',
+    rol: 'usuario',
     password: '',
   }
 
@@ -79,7 +79,9 @@ export class RegistroComponent {
     // enviamos los nuevos registros por medio del metodo push a la coleccion
     //this.coleccionUsuarios.push(credenciales);
     //console.log(credenciales)
-    //
+    this.GuardarUsuario();
+
+    this.limpiarInputs();
   }
   limpiarInputs() {
     const inputs = {
